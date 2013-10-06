@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+			<h1 class="page-title">{{ page.title }}</h1>			
+			<div id="main" role="main">
+				<section class="slider">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<img src="{% static "assets/flexslider/home/slide-01.jpg" %}" alt="" class="img-responsive" />
+							</li>
+							<li>
+								<img src="{% static "assets/flexslider/home/slide-02.jpg" %}" alt="" class="img-responsive" />
+							</li>
+							<li>
+								<img src="{% static "assets/flexslider/home/slide-03.jpg" %}" alt="" class="img-responsive" />
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+
+			<!-- Feature blocks -->
+			<div class="row">
+				<div class="col-md-4">
+					<p><a class="btn btn-default btn-block" href="#">What We Do &raquo;</a></p>
+				</div>
+				<div class="col-md-4">
+					<p><a class="btn btn-default btn-block" href="#">What To Expect &raquo;</a></p>
+				</div>
+				<div class="col-md-4">
+					<p><a class="btn btn-default btn-block" href="#">How To Get Started &raquo;</a></p>
+				</div>
+			</div>
+	  
+			<div class="row">
+				<div class="col-md-6"><h5>Latest Blog Post</h5><p>Some text ... </p></div>
+			</div>
+{% endblock %}
+
+{% block javascript %}
+		<script src="{% static "assets/js/jquery.flexslider-min.js" %}"></script>
+		<script>// Can also be used with $(document).ready()
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+				animation: "slide"
+			  });
+			});
+		</script>
+{% endblock %}

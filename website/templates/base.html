@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+
+	<head>
+
+		<title>{% block title %}{{ pages.title }} | Fitness Warehouse Lincoln{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="{{ pages.description }}" />
+		<meta name="keywords" content="{{ pages.keywords }}" />
+		<link rel="home" href="/" />
+		<link rel="stylesheet" href="{% static "assets/css/bootstrap.css" %}" />
+		<link rel="stylesheet" href="{% static "assets/css/fwl.css" %}" />
+		<link rel="stylesheet" href="{% static "assets/css/flexslider.css" %}" />
+		
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "assets/ico/apple-touch-icon-144-precomposed.png" %}">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static "assets/ico/apple-touch-icon-114-precomposed.png" %}">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "assets/ico/apple-touch-icon-72-precomposed.png" %}">
+		<link rel="apple-touch-icon-precomposed" href="{% static "assets/ico/apple-touch-icon-57-precomposed.png" %}">
+		<link rel="shortcut icon" href="{% static "assets/ico/favicon.png" %}">
+		{% block analytics %}
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+		{% endblock %}
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<div class="jumbotron">
+			
+				<div class="row col-md-3 col-md-offset-9 top-links">
+
+					<a href="/pages/sitemap/">Sitemap | </a>
+					<a href="/pages/privacy/">Privacy Policy | </a>
+					<a href="/admin/">Log In</a>
+
+				</div>
+				
+				<div class="row">
+				
+					<div class="page-header col-md-12">
+						<header>
+							<h1>Fitness Warehouse <br />Lincoln</h1>
+							
+							<div>
+
+								<div class="social-icons col-md-2">
+
+								</div>
+								
+								<div class="contact-home col-md-6 col-md-offset-6">
+									<p class="muted text-right">
+										Contact Details: Fitness Warehouse Lincoln, 
+										Email:<a href="mailto:ross@fitnesswarehouselincoln.co.uk">ross@fitnesswarehouselincoln.co.uk</a>
+									</p>
+								</div>
+								
+							</div>
+							
+						</header>
+					</div>
+					
+				</div>
+
+				{% block navigation %}
+				<div class="navbar navbar-default" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="/">Home</a></li>
+								<li><a href="/pages/our-story/">Our Story</a></li>
+								<li><a href="/pages/programmes/">Programmes</a></li>
+								<li><a href="/pages/testimonials/">Testimonials</a></li>
+								<li class="dropdown">
+									<a href="/classes/" class="dropdown-toggle" data-toggle="dropdown">Classes &amp; Schedules <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/classes/pt/">P.T.</a></li>
+										<li><a href="/classes/group-x/">Group X</a></li>
+										<li><a href="/classes/warrior-training/">Warrior Training</a></li>
+										<li><a href="/classes/general-classes/">General Classes</a></li>
+									</ul>
+								</li>
+								<li><a href="/blog/">Blog</a></li>
+								<li><a href="/pages/contact/">Contact Details</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				{% endblock %}
+
+			</div>
+
+			{% block content %}{% endblock %}
+			
+			{% block footer %}
+			<hr />
+			
+			<footer>
+				<p>&copy; Website content copyright of FitnessWarehouseLincoln {% now "Y" %}</p>
+			</footer>
+			{% endblock %}
+
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="{% static "assets/js/bootstrap.min.js" %}"></script>
+
+		{% block javascript %}{% endblock %}	
+		
+	</body>
+
+</html>

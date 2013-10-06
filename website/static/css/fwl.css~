@@ -1,0 +1,8 @@
+body>div.container-fluid {margin: 0 auto;}
+/*div{outline: red solid 1px;}*/
+.contact-home{font-size: small; line-height: 1.2;}
+.social-icons{}
+.hero-unit{padding: 0 30px;}
+.content-area{outline: gray solid 1px;}
+.free-ebook{height:250px; outline: gray solid 1px;}
+.header{clear: both;}

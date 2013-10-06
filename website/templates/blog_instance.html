@@ -1,0 +1,17 @@
+{% extends "base.content.html" %}
+{% load static %}
+
+{% block content %}
+			<h2 class="">{{ blog.title }}</h2>
+			
+			<ul class="pager">
+				<li class="previous"><a href="blog/">&larr; Back</a></li>
+			</ul>
+
+			<div class="row">
+			
+				<div class="col-md-2 free-ebook">Free PDF e-book. E-mail sign up</div>
+				<div class="col-md-10 content-area">{{ blog.body|safe }}</div>
+			
+			</div>
+{% endblock %}

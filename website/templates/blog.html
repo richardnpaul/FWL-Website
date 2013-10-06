@@ -1,0 +1,29 @@
+{% extends "base.content.html" %}
+{% load static %}
+
+{% block content %}
+			<h2 class="">{{ pages.title }}</h2>
+
+			<div class="row">
+
+				<div class="col-md-2 free-ebook">Free PDF e-book. E-mail sign up</div>
+				<div class="col-md-10 content-area">
+
+					{% for blog in blogs %}
+
+						{% if blog.published %}
+						<div class="blog-entry blog-{{ blog.id }}">
+
+							<h4><a href="{{ blog.blog_slug }}/" title="{{ blog.title }}" >{{ blog.title }}</a></h4>
+							<p class="blog-main-ptag">{{ blog.body|striptags|safe|truncatewords_html:'25' }}</p>
+
+						</div>
+						{% endif %}
+
+					{% endfor %}
+					
+
+				</div>
+
+			</div>    
+{% endblock %}

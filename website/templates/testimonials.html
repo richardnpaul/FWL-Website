@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+			<div id="main" role="main">
+				<section class="slider">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<img src="{% static "assets/flexslider/testimonials/slide-01.jpg" %}" alt="" class="img-responsive" />
+							</li>
+							<li>
+								<img src="{% static "assets/flexslider/testimonials/slide-02.jpg" %}" alt="" class="img-responsive" />
+							</li>
+							<li>
+								<img src="{% static "assets/flexslider/testimonials/slide-03.jpg" %}" alt="" class="img-responsive" />
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+{% endblock %}
+
+{% block javascript %}
+		<script src="{% static "assets/js/jquery.flexslider-min.js" %}"></script>
+		<script>// Can also be used with $(document).ready()
+			$(window).load(function() {
+			  $('.flexslider').flexslider({
+				animation: "slide"
+			  });
+			});
+		</script>
+{% endblock %}
