@@ -39,3 +39,5 @@ Thumbs.db
 # Settings.py #
 ###############
 settings.py
+settings.pyc
+~settings.py
